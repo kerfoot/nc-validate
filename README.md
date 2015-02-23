@@ -17,16 +17,14 @@ following items are checked:
 
 Data integrity is <b>NOT</b> checked.
 
-Required Python modules:
-========================
+###Required Python modules:###
 
 - [os](https://docs.python.org/2/library/os.html)
 - [sys](https://docs.python.org/2/library/sys.html)
 - [argparse](https://docs.python.org/3/library/argparse.html)
 - [netCDF4](https://github.com/Unidata/netcdf4-python)
 
-Usage
-=====
+###Usage###
 
     > nc_validate -h
 
