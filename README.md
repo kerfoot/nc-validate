@@ -6,10 +6,27 @@ template.  Results are printed to STDOUT and errors (i.e.: missing dimensions,
 variables, global and variable attributes) are printed to STDERR.
 
 The comparison is very simple.  The template file is read and then compared to
-the structure of each of the files specified on the command line.  Data
-integrity is <b>NOT</b> checked.
+the structure of each of the files specified on the command line.  The
+following items are checked:
 
-Type:
+1. Inclusion of proper dimension variables
+2. Inclusion of global attributes
+3. Inclusion of proper variables
+4. Datatypes of included variables
+5. Attributes of included variables
+
+Data integrity is <b>NOT</b> checked.
+
+Required Python modules:
+========================
+
+- [os](https://docs.python.org/2/library/os.html)
+- [sys](https://docs.python.org/2/library/sys.html)
+- [argparse](https://docs.python.org/3/library/argparse.html)
+- [netCDF4](https://github.com/Unidata/netcdf4-python)
+
+Usage
+=====
 
     > nc_validate -h
 
