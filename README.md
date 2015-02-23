@@ -26,9 +26,9 @@ compared, you can do one of the following:
 - Use the -t or --template option and specify the location of the template
 file.
 
-Then run the script like this:
+Run the script like this:
 
-    > nc_validate.py FILE1[, FILE2, ...]
+    > nc_validate.py --template PATH_TO_TEMPLATE FILE1[, FILE2, ...]
 
 - Put the file somewhere and specify it's location in the <b>default_nc_template</b> variable (line #9).
 
