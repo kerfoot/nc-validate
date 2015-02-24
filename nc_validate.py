@@ -52,7 +52,7 @@ def validate_ioosdac_nc_file(nc_file, nc_template=default_nc_template):
     (nc_path, nc_name) = os.path.split(nc_file)
 
     # Open up the template and file to validate
-    nct = Dataset(default_nc_template)
+    nct = Dataset(nc_template)
     nc = Dataset(nc_file)
     
     # 1. Check global attribures
@@ -144,7 +144,7 @@ if __name__ == '__main__':
         default=default_nc_template,
         help='Alternate template to validate against (Default={:s}'.format(default_nc_template))
     args = arg_parser.parse_args()
-    
+
     main(args)
     
     
