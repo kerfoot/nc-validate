@@ -6,7 +6,7 @@ import os
 import sys
 import argparse
 
-default_nc_template = u'./templates/IOOS_Glider_NetCDF_v2.0.nc'
+default_nc_template = os.path.join(os.path.dirname(__file__), 'templates/IOOS_Glider_NetCDF_v2.0.nc')
 
 def main(args):
     """Validate each specified NetCDF file against a NetCDF template and print
@@ -15,7 +15,7 @@ def main(args):
     if not args.nc_files:
         sys.stderr.write('No NetCDF files specified for validation\n')
         return 1
-        
+
     for nc_file in args.nc_files:
         validated = validate_ioosdac_nc_file(nc_file, nc_template=args.template)
         if validated:
