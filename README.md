@@ -17,12 +17,16 @@ following items are checked:
 
 Data integrity is <b>NOT</b> checked.
 
-###Required Python modules:###
+###Required Non-Core Python modules:###
 
-- [os](https://docs.python.org/2/library/os.html)
-- [sys](https://docs.python.org/2/library/sys.html)
-- [argparse](https://docs.python.org/3/library/argparse.html)
+The following modules are required and not typically installed with standard python distributions and can be installed using pip:
+
+    >> pip install netcdf4
+
+The [Anaconda](https://store.continuum.io/cshop/anaconda/) and [Enthought Python Distribution](https://www.enthought.com/products/epd/) python distributions come with these modules installed.
+
 - [netCDF4](https://github.com/Unidata/netcdf4-python)
+- [numpy](http://www.numpy.org/) (Installed as dependency for netCDF4)
 
 ###Usage###
 
