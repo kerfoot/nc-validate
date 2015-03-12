@@ -121,14 +121,21 @@ def validate_ioosdac_nc_file(nc_file, nc_template=default_nc_template):
                     var,
                     var_att))
                 sys.stderr.flush()
-                validated = False                
-                
+                validated = False
+
+        nc_var_count = nc_var_count + 1
+    
+    sys.stdout.write('\n{:s} RESULTS {:s}\n'.format('=' * 39, '=' * 39))
     sys.stdout.write('{:d}/{:d} required global attributes validated\n'.format(
         global_att_count,
         len(nct.ncattrs())))
     sys.stdout.write('{:d}/{:d} required dimensions validated\n'.format(
         nc_dim_count,
         len(nct.dimensions)))
+    sys.stdout.write('{:d}/{:d} required variables validated\n'.format(
+        nc_var_count,
+        len(nct.variables)))
+    sys.stdout.write('{:s}\n'.format('=' * 86))
     sys.stdout.flush()
     
     return validated
