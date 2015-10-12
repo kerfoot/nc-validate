@@ -63,6 +63,7 @@ def validate_ioosdac_nc_file(nc_file, nc_template=default_nc_template):
             sys.stderr.write(' GlobalAttributeError: Missing global attribute: {:s}\n'.format(
                 att))
             sys.stderr.flush()
+            validated = False
             continue
             
         global_att_count += 1
